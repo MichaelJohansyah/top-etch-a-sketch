@@ -22,6 +22,7 @@ function clearGrid() {
     grid.innerHTML = "";
 }
 
+
 function setupGrid(size) {
     grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
