@@ -18,7 +18,7 @@ body{
     gap: 10px;
 }
 
-.sketch-area{
+.grid{
     display: grid;
     border: 1px solid black;
     width: 600px;
