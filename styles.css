@@ -1,16 +1,16 @@
-body{
+body {
     height: 100vh;
     width: 100%;
 }
 
-.container{
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.tools{
+.tools {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,13 +19,13 @@ body{
     margin-bottom: 10px;
 }
 
-.grid{
+.grid {
     display: grid;
     border: 1px solid black;
     width: 600px;
     height: 600px;
 }
 
-.grid-element{
+.grid-element {
     user-select: none;
 }
