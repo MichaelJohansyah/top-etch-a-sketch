@@ -1,17 +1,19 @@
-// function makeGrids(size){
-//     let sketchArea = document.querySelector(".sketch-area");
-//     for (let i = 0; i < size; i++){
-//         let column = document.createElement("div");
-//         column.classList.add("column");
-//         for (let j = 0; j < size; i++){
-//             let row = document.createElement("div");
-//             row.classList.add("row");
-//             row.style.border = "2px solid black";
-//             row.innerText = (i * size) + j;
-//             column.appendChild(row);
-//         }
-//         sketchArea.appendChild(column);
-//     }
-// }
+const DEFAULT_SIZE = 16;
 
-// makeGrids(16); 
+const sketchArea = document.getElementById('sketch-area');
+
+function setupGrid(size) {
+    sketchArea.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    sketchArea.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+
+    for (let i = 0; i < size * size; i++) {
+        const gridElement = document.createElement("div");
+        gridElement.classList.add("grid-element");
+        gridElement.style.border = "1px solid black"
+        sketchArea.appendChild(gridElement);
+    }
+}
+
+window.onload = () => {
+    setupGrid(DEFAULT_SIZE);
+};
